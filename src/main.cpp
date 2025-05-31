@@ -1,0 +1,1 @@
+#include "encoding/Hamming.hpp"
