@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(OpenCV_DIR "D:/opencv/build")  
 find_package(OpenCV REQUIRED)
 
+set(CMAKE_PREFIX_PATH "D:/Qt/6.6.1/msvc2019_64/lib/cmake")
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -26,6 +27,9 @@ set(SOURCES
     src/embedding_extracting/lsb_dct.cpp
 )
 
+set(HEADERS
+    include/graphics/mainwindow.hpp
+)
 
 set(UIS
     src/graphics/mainwindow.ui
@@ -33,6 +37,7 @@ set(UIS
 
 add_executable(stego
     ${SOURCES}
+    ${HEADERS}
     ${UIS}
 )
 
@@ -40,4 +45,6 @@ target_link_libraries(stego
     Qt6::Widgets
     ${OpenCV_LIBS}
 )
+
+add_compile_options("/utf-8")
 

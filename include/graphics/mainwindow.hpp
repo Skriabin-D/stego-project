@@ -1,6 +1,6 @@
 #pragma once
 #include "graphics/gui_interface.hpp"  
-
+#include <QMainWindow>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QPixmap>

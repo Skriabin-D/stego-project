@@ -58,13 +58,40 @@ include CMakeFiles\stego.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\stego.dir\flags.make
 
+stego_autogen\timestamp: D:\Qt\6.6.1\msvc2019_64\.\bin\moc.exe
+stego_autogen\timestamp: D:\Qt\6.6.1\msvc2019_64\.\bin\uic.exe
+stego_autogen\timestamp: CMakeFiles\stego.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target stego"
+	D:\CMake\bin\cmake.exe -E cmake_autogen D:/stego_project/build/CMakeFiles/stego_autogen.dir/AutogenInfo.json Debug
+	D:\CMake\bin\cmake.exe -E touch D:/stego_project/build/stego_autogen/timestamp
+
 CMakeFiles\stego.dir\codegen:
 .PHONY : CMakeFiles\stego.dir\codegen
+
+CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj: CMakeFiles\stego.dir\flags.make
+CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj: stego_autogen\mocs_compilation.cpp
+CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/stego.dir/stego_autogen/mocs_compilation.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\build\stego_autogen\mocs_compilation.cpp
+<<
+
+CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stego.dir/stego_autogen/mocs_compilation.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe > CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\stego_project\build\stego_autogen\mocs_compilation.cpp
+<<
+
+CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stego.dir/stego_autogen/mocs_compilation.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.s /c D:\stego_project\build\stego_autogen\mocs_compilation.cpp
+<<
 
 CMakeFiles\stego.dir\src\main.cpp.obj: CMakeFiles\stego.dir\flags.make
 CMakeFiles\stego.dir\src\main.cpp.obj: D:\stego_project\src\main.cpp
 CMakeFiles\stego.dir\src\main.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stego.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/stego.dir/src/main.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\main.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\main.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\main.cpp
 <<
@@ -81,10 +108,50 @@ CMakeFiles\stego.dir\src\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\main.cpp.s /c D:\stego_project\src\main.cpp
 <<
 
+CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj: CMakeFiles\stego.dir\flags.make
+CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj: D:\stego_project\src\graphics\gui_interface.cpp
+CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/stego.dir/src/graphics/gui_interface.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\graphics\gui_interface.cpp
+<<
+
+CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stego.dir/src/graphics/gui_interface.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe > CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\stego_project\src\graphics\gui_interface.cpp
+<<
+
+CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stego.dir/src/graphics/gui_interface.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\graphics\gui_interface.cpp.s /c D:\stego_project\src\graphics\gui_interface.cpp
+<<
+
+CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj: CMakeFiles\stego.dir\flags.make
+CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj: D:\stego_project\src\graphics\mainwindow.cpp
+CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/stego.dir/src/graphics/mainwindow.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\graphics\mainwindow.cpp
+<<
+
+CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stego.dir/src/graphics/mainwindow.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe > CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\stego_project\src\graphics\mainwindow.cpp
+<<
+
+CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stego.dir/src/graphics/mainwindow.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\graphics\mainwindow.cpp.s /c D:\stego_project\src\graphics\mainwindow.cpp
+<<
+
 CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj: CMakeFiles\stego.dir\flags.make
 CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj: D:\stego_project\src\encoding\Hamming.cpp
 CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/stego.dir/src/encoding/Hamming.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/stego.dir/src/encoding/Hamming.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\encoding\Hamming.cpp
 <<
@@ -101,30 +168,10 @@ CMakeFiles\stego.dir\src\encoding\Hamming.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\encoding\Hamming.cpp.s /c D:\stego_project\src\encoding\Hamming.cpp
 <<
 
-CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: CMakeFiles\stego.dir\flags.make
-CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: D:\stego_project\src\embedding_extracting\lsb_dct.cpp
-CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\embedding_extracting\lsb_dct.cpp
-<<
-
-CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.i"
-	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe > CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\stego_project\src\embedding_extracting\lsb_dct.cpp
-<<
-
-CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.s"
-	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.s /c D:\stego_project\src\embedding_extracting\lsb_dct.cpp
-<<
-
 CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj: CMakeFiles\stego.dir\flags.make
 CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj: D:\stego_project\src\embedding_extracting\pvd.cpp
 CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/stego.dir/src/embedding_extracting/pvd.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/stego.dir/src/embedding_extracting/pvd.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\embedding_extracting\pvd.cpp
 <<
@@ -141,21 +188,48 @@ CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.s /c D:\stego_project\src\embedding_extracting\pvd.cpp
 <<
 
+CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: CMakeFiles\stego.dir\flags.make
+CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: D:\stego_project\src\embedding_extracting\lsb_dct.cpp
+CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj: CMakeFiles\stego.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj.d --working-dir=D:\stego_project\build --filter-prefix="Примечание: включение файла:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj /FdCMakeFiles\stego.dir\ /FS -c D:\stego_project\src\embedding_extracting\lsb_dct.cpp
+<<
+
+CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.i"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe > CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\stego_project\src\embedding_extracting\lsb_dct.cpp
+<<
+
+CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stego.dir/src/embedding_extracting/lsb_dct.cpp.s"
+	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.s /c D:\stego_project\src\embedding_extracting\lsb_dct.cpp
+<<
+
 # Object files for target stego
 stego_OBJECTS = \
+"CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj" \
 "CMakeFiles\stego.dir\src\main.cpp.obj" \
+"CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj" \
+"CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj" \
 "CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj" \
-"CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj" \
-"CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj"
+"CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj" \
+"CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj"
 
 # External object files for target stego
 stego_EXTERNAL_OBJECTS =
 
+stego.exe: CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj
 stego.exe: CMakeFiles\stego.dir\src\main.cpp.obj
+stego.exe: CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj
+stego.exe: CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj
 stego.exe: CMakeFiles\stego.dir\src\encoding\Hamming.cpp.obj
-stego.exe: CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj
 stego.exe: CMakeFiles\stego.dir\src\embedding_extracting\pvd.cpp.obj
+stego.exe: CMakeFiles\stego.dir\src\embedding_extracting\lsb_dct.cpp.obj
 stego.exe: CMakeFiles\stego.dir\build.make
+stego.exe: D:\Qt\6.6.1\msvc2019_64\lib\Qt6Widgetsd.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
@@ -172,10 +246,12 @@ stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
 stego.exe: D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib
+stego.exe: D:\Qt\6.6.1\msvc2019_64\lib\Qt6Guid.lib
+stego.exe: D:\Qt\6.6.1\msvc2019_64\lib\Qt6Cored.lib
 stego.exe: CMakeFiles\stego.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable stego.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\stego_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable stego.exe"
 	D:\CMake\bin\cmake.exe -E vs_link_exe --msvc-ver=1941 --intdir=CMakeFiles\stego.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1441~1.341\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\stego.dir\objects1.rsp @<<
- /out:stego.exe /implib:stego.lib /pdb:D:\stego_project\build\stego.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:stego.exe /implib:stego.lib /pdb:D:\stego_project\build\stego.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  D:\Qt\6.6.1\msvc2019_64\lib\Qt6Widgetsd.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\opencv\build\x64\vc16\lib\opencv_world4110d.lib D:\Qt\6.6.1\msvc2019_64\lib\Qt6Guid.lib D:\Qt\6.6.1\msvc2019_64\lib\Qt6Cored.lib mpr.lib userenv.lib d3d11.lib dxgi.lib dxguid.lib d3d12.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -186,7 +262,7 @@ CMakeFiles\stego.dir\clean:
 	$(CMAKE_COMMAND) -P CMakeFiles\stego.dir\cmake_clean.cmake
 .PHONY : CMakeFiles\stego.dir\clean
 
-CMakeFiles\stego.dir\depend:
+CMakeFiles\stego.dir\depend: stego_autogen\timestamp
 	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\stego_project D:\stego_project D:\stego_project\build D:\stego_project\build D:\stego_project\build\CMakeFiles\stego.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles\stego.dir\depend
 

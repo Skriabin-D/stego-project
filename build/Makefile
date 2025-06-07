@@ -118,6 +118,32 @@ stego\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\build
 .PHONY : stego\fast
 
+#=============================================================================
+# Target rules for targets named stego_autogen_timestamp_deps
+
+# Build rule for target.
+stego_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) stego_autogen_timestamp_deps
+.PHONY : stego_autogen_timestamp_deps
+
+# fast build rule for target.
+stego_autogen_timestamp_deps\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego_autogen_timestamp_deps.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego_autogen_timestamp_deps.dir\build
+.PHONY : stego_autogen_timestamp_deps\fast
+
+#=============================================================================
+# Target rules for targets named stego_autogen
+
+# Build rule for target.
+stego_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) stego_autogen
+.PHONY : stego_autogen
+
+# fast build rule for target.
+stego_autogen\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego_autogen.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego_autogen.dir\build
+.PHONY : stego_autogen\fast
+
 src\embedding_extracting\lsb_dct.obj: src\embedding_extracting\lsb_dct.cpp.obj
 .PHONY : src\embedding_extracting\lsb_dct.obj
 
@@ -190,6 +216,54 @@ src\encoding\Hamming.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\encoding\Hamming.cpp.s
 .PHONY : src\encoding\Hamming.cpp.s
 
+src\graphics\gui_interface.obj: src\graphics\gui_interface.cpp.obj
+.PHONY : src\graphics\gui_interface.obj
+
+# target to build an object file
+src\graphics\gui_interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.obj
+.PHONY : src\graphics\gui_interface.cpp.obj
+
+src\graphics\gui_interface.i: src\graphics\gui_interface.cpp.i
+.PHONY : src\graphics\gui_interface.i
+
+# target to preprocess a source file
+src\graphics\gui_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.i
+.PHONY : src\graphics\gui_interface.cpp.i
+
+src\graphics\gui_interface.s: src\graphics\gui_interface.cpp.s
+.PHONY : src\graphics\gui_interface.s
+
+# target to generate assembly for a file
+src\graphics\gui_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\gui_interface.cpp.s
+.PHONY : src\graphics\gui_interface.cpp.s
+
+src\graphics\mainwindow.obj: src\graphics\mainwindow.cpp.obj
+.PHONY : src\graphics\mainwindow.obj
+
+# target to build an object file
+src\graphics\mainwindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.obj
+.PHONY : src\graphics\mainwindow.cpp.obj
+
+src\graphics\mainwindow.i: src\graphics\mainwindow.cpp.i
+.PHONY : src\graphics\mainwindow.i
+
+# target to preprocess a source file
+src\graphics\mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.i
+.PHONY : src\graphics\mainwindow.cpp.i
+
+src\graphics\mainwindow.s: src\graphics\mainwindow.cpp.s
+.PHONY : src\graphics\mainwindow.s
+
+# target to generate assembly for a file
+src\graphics\mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\graphics\mainwindow.cpp.s
+.PHONY : src\graphics\mainwindow.cpp.s
+
 src\main.obj: src\main.cpp.obj
 .PHONY : src\main.obj
 
@@ -214,6 +288,30 @@ src\main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\src\main.cpp.s
 .PHONY : src\main.cpp.s
 
+stego_autogen\mocs_compilation.obj: stego_autogen\mocs_compilation.cpp.obj
+.PHONY : stego_autogen\mocs_compilation.obj
+
+# target to build an object file
+stego_autogen\mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.obj
+.PHONY : stego_autogen\mocs_compilation.cpp.obj
+
+stego_autogen\mocs_compilation.i: stego_autogen\mocs_compilation.cpp.i
+.PHONY : stego_autogen\mocs_compilation.i
+
+# target to preprocess a source file
+stego_autogen\mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.i
+.PHONY : stego_autogen\mocs_compilation.cpp.i
+
+stego_autogen\mocs_compilation.s: stego_autogen\mocs_compilation.cpp.s
+.PHONY : stego_autogen\mocs_compilation.s
+
+# target to generate assembly for a file
+stego_autogen\mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego.dir\stego_autogen\mocs_compilation.cpp.s
+.PHONY : stego_autogen\mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -222,6 +320,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... stego_autogen
+	@echo ... stego_autogen_timestamp_deps
 	@echo ... stego
 	@echo ... src/embedding_extracting/lsb_dct.obj
 	@echo ... src/embedding_extracting/lsb_dct.i
@@ -232,9 +332,18 @@ help:
 	@echo ... src/encoding/Hamming.obj
 	@echo ... src/encoding/Hamming.i
 	@echo ... src/encoding/Hamming.s
+	@echo ... src/graphics/gui_interface.obj
+	@echo ... src/graphics/gui_interface.i
+	@echo ... src/graphics/gui_interface.s
+	@echo ... src/graphics/mainwindow.obj
+	@echo ... src/graphics/mainwindow.i
+	@echo ... src/graphics/mainwindow.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... stego_autogen/mocs_compilation.obj
+	@echo ... stego_autogen/mocs_compilation.i
+	@echo ... stego_autogen/mocs_compilation.s
 .PHONY : help
 
 

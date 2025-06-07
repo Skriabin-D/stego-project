@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Стеганография</string>
+   <string>РЎС‚РµРіР°РЅРѕРіСЂР°С„РёСЏ</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -20,7 +20,7 @@
       <item>
        <widget class="QRadioButton" name="radioEmbed">
         <property name="text">
-         <string>Встраивание</string>
+         <string>Р’СЃС‚СЂР°РёРІР°РЅРёРµ</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -30,7 +30,7 @@
       <item>
        <widget class="QRadioButton" name="radioExtract">
         <property name="text">
-         <string>Извлечение</string>
+         <string>РР·РІР»РµС‡РµРЅРёРµ</string>
         </property>
        </widget>
       </item>
@@ -39,7 +39,7 @@
     <item>
      <layout class="QHBoxLayout" name="methodLayout">
       <item>
-       <widget class="QRadioButton" name="radioPVD">
+       <widget class="QRadioButton" name="radioMethodPVD">
         <property name="text">
          <string>PVD</string>
         </property>
@@ -58,25 +58,25 @@
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="btnLoadImage">
+     <widget class="QPushButton" name="buttonLoadImage">
       <property name="text">
-       <string>Загрузить изображение</string>
+       <string>Р—Р°РіСЂСѓР·РёС‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ</string>
       </property>
      </widget>
     </item>
     <item>
      <layout class="QHBoxLayout">
       <item>
-       <widget class="QLabel" name="labelInputImage">
+       <widget class="QLabel" name="labelOriginal">
         <property name="text">
-         <string>Исходное изображение</string>
+         <string>РСЃС…РѕРґРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelOutputImage">
+       <widget class="QLabel" name="labelResult">
         <property name="text">
-         <string>Результат</string>
+         <string>Р РµР·СѓР»СЊС‚Р°С‚</string>
         </property>
        </widget>
       </item>
@@ -85,22 +85,22 @@
     <item>
      <widget class="QLabel" name="labelMessage">
       <property name="text">
-       <string>Сообщение:</string>
+       <string>РЎРѕРѕР±С‰РµРЅРёРµ:</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="messageEdit"/>
+     <widget class="QLineEdit" name="lineMessage"/>
     </item>
     <item>
      <widget class="QLabel" name="labelBitCount">
       <property name="text">
-       <string>Количество бит:</string>
+       <string>РљРѕР»РёС‡РµСЃС‚РІРѕ Р±РёС‚:</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="bitCountSpin">
+     <widget class="QSpinBox" name="spinNumBits">
       <property name="minimum">
        <number>1</number>
       </property>
@@ -110,9 +110,9 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="btnProcess">
+     <widget class="QPushButton" name="buttonProcess">
       <property name="text">
-       <string>Встроить</string>
+       <string>Р’СЃС‚СЂРѕРёС‚СЊ</string>
       </property>
      </widget>
     </item>
@@ -129,4 +129,3 @@
  <resources/>
  <connections/>
 </ui>
-
