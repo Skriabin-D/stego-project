@@ -3,7 +3,7 @@
 
 #include <QFileDialog>
 #include <QMessageBox>
-#include <QPixmap>i
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
