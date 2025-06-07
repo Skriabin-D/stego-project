@@ -7,9 +7,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/stego.dir/src/encoding/Hamming.cpp.obj.d"
   "CMakeFiles/stego.dir/src/main.cpp.obj"
   "CMakeFiles/stego.dir/src/main.cpp.obj.d"
-  "libstego.dll.a"
   "stego.exe"
   "stego.exe.manifest"
+  "stego.lib"
   "stego.pdb"
 )
 

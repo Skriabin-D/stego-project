@@ -47,13 +47,6 @@ void embed_pvd(const std::string& image_path, const std::vector<uint8_t>& messag
     size_t bit_pointer = 0;
     size_t total_bits = message_bits.size();
 
-    // Запись оригинальных битов в файл
-    std::ofstream ofs("original_bits.txt");
-    for (uint8_t b : original_message_bits) {
-        ofs << static_cast<int>(b);
-    }
-    ofs.close();
-
     for (int i = 0; i < height && bit_pointer < total_bits; ++i) {
         for (int j = 0; j + 1 < width && bit_pointer < total_bits; j += 2) {
             for (int k = 0; k < 3 && bit_pointer < total_bits; ++k) {
@@ -63,7 +56,6 @@ void embed_pvd(const std::string& image_path, const std::vector<uint8_t>& messag
 
                 auto [lower, upper] = get_pvd_range(diff);
                 int bits_per_pair = static_cast<int>(std::floor(std::log2(upper - lower + 1)));
-                if (bits_per_pair == 0) continue;
 
                 std::vector<uint8_t> bits_to_embed;
                 for (int b = 0; b < bits_per_pair; ++b) {
@@ -158,35 +150,3 @@ std::vector<uint8_t> extract_pvd(const std::string& stego_path, size_t num_bits)
 
     return extracted_bits;
 }
-
-//int main() {
-//    std::cout << "Выберите операцию:" << std::endl;
-//    std::cout << "1. Встроить сообщение в изображение" << std::endl;
-//    std::cout << "2. Извлечь сообщение из изображения" << std::endl;
-//    std::string choice;
-//    std::getline(std::cin, choice);
-//
-//    if (choice == "1") {
-//        std::cout << "Введите путь к изображению-контейнеру: ";
-//        std::string container_path;
-//        std::getline(std::cin, container_path);
-//        std::cout << "Введите последовательность битов для встраивания (например, 0111101000000000): ";
-//        std::string bit_string;
-//        std::getline(std::cin, bit_string);
-//        std::string output_path = "stego_output.png";
-//        embed_pvd(container_path, bit_string, output_path);
-//    } else if (choice == "2") {
-//        std::cout << "Введите путь к стего-изображению: ";
-//        std::string stego_path;
-//        std::getline(std::cin, stego_path);
-//        std::cout << "Введите количество битов для извлечения: ";
-//        size_t num_bits;
-//        std::cin >> num_bits;
-//        std::cin.ignore(); // Очистка буфера
-//        extract_pvd(stego_path, num_bits);
-//    } else {
-//        std::cout << "Неверный выбор!" << std::endl;
-//    }
-//
-//    return 0;
-//}
