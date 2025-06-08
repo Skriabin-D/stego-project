@@ -4,12 +4,14 @@ void handleEmbedding(const QString& imagePath, const QString& message, const QSt
 {
     auto bits = stringToBitSequence(message.toStdString());
     auto encoded = encodeBitSequence(bits);
+    size_t size;
     if (usePVD)
-        embed_pvd(imagePath.toStdString(), encoded, savePath.toStdString());
+       size = embed_pvd(imagePath.toStdString(), encoded, savePath.toStdString());
     else
-        embed_lsb_dct(imagePath.toStdString(), encoded, savePath.toStdString());
+       size = embed_lsb_dct(imagePath.toStdString(), encoded, savePath.toStdString());
     QString method = usePVD ? "PVD" : "LSB-DCT";
-    QMessageBox::information(nullptr, u8"Ready", u8"Message was embedded using the method: " + method);
+    QString num_bits = QString::number(size);
+    QMessageBox::information(nullptr, u8"Ready", u8"Message was embedded using the method: " + method + u8"\nTHE NUMBER OF BITS EMBEDDED: " + num_bits);
 }
 
 void handleExtraction(const QString& imagePath, size_t numBits, bool usePVD, QTextEdit* outputText)

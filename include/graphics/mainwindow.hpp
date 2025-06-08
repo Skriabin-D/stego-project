@@ -21,8 +21,8 @@ public:
 
 private slots:
     void onLoadImageClicked();
+    void onModeChanged(int index);
     void onProcessClicked();
-    void onModeChanged();
 
 private:
     Ui::MainWindow* ui;

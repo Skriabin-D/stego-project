@@ -42,17 +42,19 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "MainWindow",
     "onLoadImageClicked",
     "",
-    "onProcessClicked",
-    "onModeChanged"
+    "onModeChanged",
+    "index",
+    "onProcessClicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[12];
     char stringdata0[11];
     char stringdata1[19];
     char stringdata2[1];
-    char stringdata3[17];
-    char stringdata4[14];
+    char stringdata3[14];
+    char stringdata4[6];
+    char stringdata5[17];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -61,14 +63,16 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
         QT_MOC_LITERAL(11, 18),  // "onLoadImageClicked"
         QT_MOC_LITERAL(30, 0),  // ""
-        QT_MOC_LITERAL(31, 16),  // "onProcessClicked"
-        QT_MOC_LITERAL(48, 13)   // "onModeChanged"
+        QT_MOC_LITERAL(31, 13),  // "onModeChanged"
+        QT_MOC_LITERAL(45, 5),  // "index"
+        QT_MOC_LITERAL(51, 16)   // "onProcessClicked"
     },
     "MainWindow",
     "onLoadImageClicked",
     "",
-    "onProcessClicked",
-    "onModeChanged"
+    "onModeChanged",
+    "index",
+    "onProcessClicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -89,12 +93,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    0,   34,    2, 0x08,    3 /* Private */,
+       3,    1,   33,    2, 0x08,    2 /* Private */,
+       5,    0,   36,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
     QMetaType::Void,
 
        0        // eod
@@ -111,9 +115,10 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'onLoadImageClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onProcessClicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onModeChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'onProcessClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -126,12 +131,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->onLoadImageClicked(); break;
-        case 1: _t->onProcessClicked(); break;
-        case 2: _t->onModeChanged(); break;
+        case 1: _t->onModeChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->onProcessClicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const

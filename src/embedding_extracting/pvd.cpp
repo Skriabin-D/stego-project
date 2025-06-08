@@ -3,21 +3,7 @@
 // Определение диапазонов для PVD
 const std::vector<std::pair<int, int>> pvd_ranges = {{0, 7}, {8, 15}, {16, 31}, {32, 63}, {64, 127}, {128, 255}};
 
-//// Преобразование строки битов в std::vector<uint8_t>
-//std::vector<uint8_t> string_to_bits(const std::string& bit_string) {
-//    std::vector<uint8_t> bits;
-//    for (char c : bit_string) {
-//        if (c == '0' || c == '1') {
-//            bits.push_back(c - '0');
-//        } else {
-//            std::cerr << "Ошибка: строка битов должна содержать только 0 и 1" << std::endl;
-//            return std::vector<uint8_t>();
-//        }
-//    }
-//    return bits;
-//}
 
-// Получение диапазона PVD
 std::pair<int, int> get_pvd_range(int diff) {
     for (const auto& pr : pvd_ranges) {
         if (diff >= pr.first && diff <= pr.second) {
@@ -28,20 +14,19 @@ std::pair<int, int> get_pvd_range(int diff) {
 }
 
 // Функция встраивания PVD
-void embed_pvd(const std::string& image_path, const std::vector<uint8_t>& message_bits, const std::string& output_path) {
+size_t embed_pvd(const std::string& image_path, const std::vector<uint8_t>& message_bits, const std::string& output_path) {
     cv::Mat img = cv::imread(image_path, cv::IMREAD_COLOR);
     if (img.empty()) {
         std::cerr << "Ошибка: не удалось открыть контейнерное изображение: " << image_path << std::endl;
-        return;
+        return 0;
     }
     img.convertTo(img, CV_32S);
 
     int height = img.rows;
     int width = img.cols;
 
-    //std::vector<uint8_t> message_bits = string_to_bits(bit_string);
     if (message_bits.empty()) {
-        return;
+        return 0;
     }
     std::vector<uint8_t> original_message_bits = message_bits;
     size_t bit_pointer = 0;
@@ -89,14 +74,14 @@ void embed_pvd(const std::string& image_path, const std::vector<uint8_t>& messag
         }
     }
 
-    std::cout << "Количество встроенных битов: " << bit_pointer << std::endl;
-
     img.convertTo(img, CV_8U);
     if (!cv::imwrite(output_path, img)) {
         std::cerr << "Ошибка: не удалось сохранить стего-изображение: " << output_path << std::endl;
     } else {
         std::cout << "Стего-изображение сохранено как: " << output_path << std::endl;
     }
+
+    return total_bits;
 }
 
 // Функция извлечения PVD

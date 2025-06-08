@@ -4,10 +4,7 @@
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <x>0</x><y>0</y><width>1200</width><height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,114 +12,103 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+
+    <!-- выбор режима и метода -->
     <item>
-     <layout class="QHBoxLayout" name="modeLayout">
+     <layout class="QHBoxLayout" name="selectionLayout">
       <item>
-       <widget class="QRadioButton" name="radioEmbed">
-        <property name="text">
-         <string>Встраивание</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
+       <widget class="QLabel" name="labelMode">
+        <property name="text"><string>Режим:</string></property>
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioExtract">
-        <property name="text">
-         <string>Извлечение</string>
+       <widget class="QComboBox" name="comboMode">
+        <item><property name="text"><string>Embed</string></property></item>
+        <item><property name="text"><string>Extract</string></property></item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+        <property name="sizeHint" stdset="0">
+         <size><width>20</width><height>20</height></size>
         </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelMethod">
+        <property name="text"><string>Метод:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboMethod">
+        <item><property name="text"><string>PVD</string></property></item>
+        <item><property name="text"><string>LSB-DCT</string></property></item>
        </widget>
       </item>
      </layout>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="methodLayout">
-      <item>
-       <widget class="QRadioButton" name="radioMethodPVD">
-        <property name="text">
-         <string>PVD</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioLSB">
-        <property name="text">
-         <string>LSB-DCT</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
+
+    <!-- загрузка -->
     <item>
      <widget class="QPushButton" name="buttonLoadImage">
-      <property name="text">
-       <string>Загрузить изображение</string>
-      </property>
+      <property name="text"><string>Загрузить изображение</string></property>
      </widget>
     </item>
+
+    <!-- превью -->
     <item>
-     <layout class="QHBoxLayout">
+     <layout class="QHBoxLayout" name="previewLayout">
       <item>
        <widget class="QLabel" name="labelOriginal">
-        <property name="text">
-         <string>Исходное изображение</string>
-        </property>
+        <property name="text"><string>Исходное изображение</string></property>
        </widget>
       </item>
       <item>
        <widget class="QLabel" name="labelResult">
-        <property name="text">
-         <string>Результат</string>
-        </property>
+        <property name="text"><string>Результат</string></property>
        </widget>
       </item>
      </layout>
     </item>
+
+    <!-- сообщение -->
     <item>
      <widget class="QLabel" name="labelMessage">
-      <property name="text">
-       <string>Сообщение:</string>
-      </property>
+      <property name="text"><string>Сообщение:</string></property>
      </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="lineMessage"/>
     </item>
+
+    <!-- количество бит для извлечения -->
     <item>
      <widget class="QLabel" name="labelBitCount">
-      <property name="text">
-       <string>Количество бит:</string>
-      </property>
+      <property name="text"><string>Количество бит:</string></property>
      </widget>
     </item>
     <item>
      <widget class="QSpinBox" name="spinNumBits">
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>1000000</number>
-      </property>
+      <property name="minimum"><number>1</number></property>
+      <property name="maximum"><number>1000000</number></property>
      </widget>
     </item>
+
+    <!-- кнопка действия -->
     <item>
      <widget class="QPushButton" name="buttonProcess">
-      <property name="text">
-       <string>Встроить</string>
-      </property>
+      <property name="text"><string>Встроить</string></property>
      </widget>
     </item>
+
+    <!-- вывод при извлечении -->
     <item>
      <widget class="QTextEdit" name="textOutput">
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
+      <property name="readOnly"><bool>true</bool></property>
      </widget>
     </item>
+
    </layout>
   </widget>
  </widget>

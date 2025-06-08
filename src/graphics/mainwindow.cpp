@@ -1,18 +1,25 @@
 #include "graphics/mainwindow.hpp"
-
 #include "graphics/ui_mainwindow.h"
-
+#include "graphics/gui_interface.hpp"
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    connect(ui->buttonLoadImage, &QPushButton::clicked, this, &MainWindow::onLoadImageClicked);
-    connect(ui->buttonProcess, &QPushButton::clicked, this, &MainWindow::onProcessClicked);
-    connect(ui->radioEmbed, &QRadioButton::toggled, this, &MainWindow::onModeChanged);
+    // connect signals
+    connect(ui->buttonLoadImage, &QPushButton::clicked,
+        this, &MainWindow::onLoadImageClicked);
 
-    onModeChanged(); 
+    connect(ui->comboMode,
+        QOverload<int>::of(&QComboBox::currentIndexChanged),
+        this, &MainWindow::onModeChanged);
+
+    connect(ui->buttonProcess, &QPushButton::clicked,
+        this, &MainWindow::onProcessClicked);
+
+    // set initial state
+    onModeChanged(ui->comboMode->currentIndex());
 }
 
 MainWindow::~MainWindow()
@@ -22,40 +29,61 @@ MainWindow::~MainWindow()
 
 void MainWindow::onLoadImageClicked()
 {
-    loadedImagePath = QFileDialog::getOpenFileName(this, "Upload image", "", "Images (*.png *.jpg *.bmp)");
+    loadedImagePath = QFileDialog::getOpenFileName(
+        this,
+        tr("Select Image"),
+        QString(),
+        tr("Images (*.png *.jpg *.bmp)")
+    );
     if (!loadedImagePath.isEmpty()) {
         QPixmap pix(loadedImagePath);
-        ui->labelOriginal->setPixmap(pix.scaled(ui->labelOriginal->size(), Qt::KeepAspectRatio));
+        ui->labelOriginal->setPixmap(
+            pix.scaled(ui->labelOriginal->size(), Qt::KeepAspectRatio)
+        );
     }
 }
 
-void MainWindow::onModeChanged()
+void MainWindow::onModeChanged(int /*index*/)
 {
-    bool isEmbedding = ui->radioEmbed->isChecked();
+    bool isEmbedding = (ui->comboMode->currentText() == tr("Embed"));
     ui->lineMessage->setEnabled(isEmbedding);
     ui->spinNumBits->setEnabled(!isEmbedding);
-    ui->buttonProcess->setText(isEmbedding ? "Embed" : "Extract");
+    ui->buttonProcess->setText(
+        isEmbedding ? tr("Embed") : tr("Extract")
+    );
 }
 
 void MainWindow::onProcessClicked()
 {
     if (loadedImagePath.isEmpty()) {
-        QMessageBox::warning(this, "Error", "First, upload the image");
+        QMessageBox::warning(
+            this,
+            tr("Error"),
+            tr("Please load an image first")
+        );
         return;
     }
 
-    bool usePVD = ui->radioMethodPVD->isChecked();
-    QString methodName = usePVD ? "PVD" : "LSB-DCT";
+    bool usePVD = (ui->comboMethod->currentText() == tr("PVD"));
 
-    if (ui->radioEmbed->isChecked()) {
+    if (ui->comboMode->currentText() == tr("Embed")) {
         QString message = ui->lineMessage->text();
-        QString savePath = QFileDialog::getSaveFileName(this, "Save the image", "stego.png", "Images (*.png)");
-        if (savePath.isEmpty()) return;
+        QString savePath = QFileDialog::getSaveFileName(
+            this,
+            tr("Save Stego Image"),
+            "stego.png",
+            tr("Images (*.png)")
+        );
+        if (savePath.isEmpty())
+            return;
 
         handleEmbedding(loadedImagePath, message, savePath, usePVD);
 
+        // display result
         QPixmap result(savePath);
-        ui->labelResult->setPixmap(result.scaled(ui->labelResult->size(), Qt::KeepAspectRatio));
+        ui->labelResult->setPixmap(
+            result.scaled(ui->labelResult->size(), Qt::KeepAspectRatio)
+        );
 
     }
     else {

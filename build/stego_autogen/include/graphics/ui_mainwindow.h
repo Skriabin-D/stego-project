@@ -11,12 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
@@ -29,14 +30,14 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *modeLayout;
-    QRadioButton *radioEmbed;
-    QRadioButton *radioExtract;
-    QHBoxLayout *methodLayout;
-    QRadioButton *radioMethodPVD;
-    QRadioButton *radioLSB;
+    QHBoxLayout *selectionLayout;
+    QLabel *labelMode;
+    QComboBox *comboMode;
+    QSpacerItem *horizontalSpacer;
+    QLabel *labelMethod;
+    QComboBox *comboMethod;
     QPushButton *buttonLoadImage;
-    QHBoxLayout *hboxLayout;
+    QHBoxLayout *previewLayout;
     QLabel *labelOriginal;
     QLabel *labelResult;
     QLabel *labelMessage;
@@ -50,62 +51,63 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(600, 400);
+        MainWindow->resize(1200, 720);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
-        modeLayout = new QHBoxLayout();
-        modeLayout->setObjectName("modeLayout");
-        radioEmbed = new QRadioButton(centralwidget);
-        radioEmbed->setObjectName("radioEmbed");
-        radioEmbed->setChecked(true);
+        selectionLayout = new QHBoxLayout();
+        selectionLayout->setObjectName("selectionLayout");
+        labelMode = new QLabel(centralwidget);
+        labelMode->setObjectName("labelMode");
 
-        modeLayout->addWidget(radioEmbed);
+        selectionLayout->addWidget(labelMode);
 
-        radioExtract = new QRadioButton(centralwidget);
-        radioExtract->setObjectName("radioExtract");
+        comboMode = new QComboBox(centralwidget);
+        comboMode->addItem(QString());
+        comboMode->addItem(QString());
+        comboMode->setObjectName("comboMode");
 
-        modeLayout->addWidget(radioExtract);
+        selectionLayout->addWidget(comboMode);
+
+        horizontalSpacer = new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        selectionLayout->addItem(horizontalSpacer);
+
+        labelMethod = new QLabel(centralwidget);
+        labelMethod->setObjectName("labelMethod");
+
+        selectionLayout->addWidget(labelMethod);
+
+        comboMethod = new QComboBox(centralwidget);
+        comboMethod->addItem(QString());
+        comboMethod->addItem(QString());
+        comboMethod->setObjectName("comboMethod");
+
+        selectionLayout->addWidget(comboMethod);
 
 
-        verticalLayout->addLayout(modeLayout);
-
-        methodLayout = new QHBoxLayout();
-        methodLayout->setObjectName("methodLayout");
-        radioMethodPVD = new QRadioButton(centralwidget);
-        radioMethodPVD->setObjectName("radioMethodPVD");
-        radioMethodPVD->setChecked(true);
-
-        methodLayout->addWidget(radioMethodPVD);
-
-        radioLSB = new QRadioButton(centralwidget);
-        radioLSB->setObjectName("radioLSB");
-
-        methodLayout->addWidget(radioLSB);
-
-
-        verticalLayout->addLayout(methodLayout);
+        verticalLayout->addLayout(selectionLayout);
 
         buttonLoadImage = new QPushButton(centralwidget);
         buttonLoadImage->setObjectName("buttonLoadImage");
 
         verticalLayout->addWidget(buttonLoadImage);
 
-        hboxLayout = new QHBoxLayout();
-        hboxLayout->setObjectName("hboxLayout");
+        previewLayout = new QHBoxLayout();
+        previewLayout->setObjectName("previewLayout");
         labelOriginal = new QLabel(centralwidget);
         labelOriginal->setObjectName("labelOriginal");
 
-        hboxLayout->addWidget(labelOriginal);
+        previewLayout->addWidget(labelOriginal);
 
         labelResult = new QLabel(centralwidget);
         labelResult->setObjectName("labelResult");
 
-        hboxLayout->addWidget(labelResult);
+        previewLayout->addWidget(labelResult);
 
 
-        verticalLayout->addLayout(hboxLayout);
+        verticalLayout->addLayout(previewLayout);
 
         labelMessage = new QLabel(centralwidget);
         labelMessage->setObjectName("labelMessage");
@@ -150,10 +152,14 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\265\320\263\320\260\320\275\320\276\320\263\321\200\320\260\321\204\320\270\321\217", nullptr));
-        radioEmbed->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\321\200\320\260\320\270\320\262\320\260\320\275\320\270\320\265", nullptr));
-        radioExtract->setText(QCoreApplication::translate("MainWindow", "\320\230\320\267\320\262\320\273\320\265\321\207\320\265\320\275\320\270\320\265", nullptr));
-        radioMethodPVD->setText(QCoreApplication::translate("MainWindow", "PVD", nullptr));
-        radioLSB->setText(QCoreApplication::translate("MainWindow", "LSB-DCT", nullptr));
+        labelMode->setText(QCoreApplication::translate("MainWindow", "\320\240\320\265\320\266\320\270\320\274:", nullptr));
+        comboMode->setItemText(0, QCoreApplication::translate("MainWindow", "Embed", nullptr));
+        comboMode->setItemText(1, QCoreApplication::translate("MainWindow", "Extract", nullptr));
+
+        labelMethod->setText(QCoreApplication::translate("MainWindow", "\320\234\320\265\321\202\320\276\320\264:", nullptr));
+        comboMethod->setItemText(0, QCoreApplication::translate("MainWindow", "PVD", nullptr));
+        comboMethod->setItemText(1, QCoreApplication::translate("MainWindow", "LSB-DCT", nullptr));
+
         buttonLoadImage->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\320\267\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", nullptr));
         labelOriginal->setText(QCoreApplication::translate("MainWindow", "\320\230\321\201\321\205\320\276\320\264\320\275\320\276\320\265 \320\270\320\267\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", nullptr));
         labelResult->setText(QCoreApplication::translate("MainWindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202", nullptr));
