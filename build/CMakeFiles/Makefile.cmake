@@ -266,6 +266,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.0.0-rc1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.0.0-rc1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.0.0-rc1/CMakeSystem.cmake"
+  "D:/stego_project/tests/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -283,6 +284,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/stego_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/HammingTest_autogen.dir/AutogenInfo.json"
+  "tests/CMakeFiles/lsb_dctTest_autogen.dir/AutogenInfo.json"
+  "tests/CMakeFiles/pvdTest_autogen.dir/AutogenInfo.json"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -290,4 +295,13 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/stego.dir/DependInfo.cmake"
   "CMakeFiles/stego_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/stego_autogen.dir/DependInfo.cmake"
+  "tests/CMakeFiles/HammingTest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/lsb_dctTest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/pvdTest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/HammingTest_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/CMakeFiles/HammingTest_autogen.dir/DependInfo.cmake"
+  "tests/CMakeFiles/lsb_dctTest_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/CMakeFiles/lsb_dctTest_autogen.dir/DependInfo.cmake"
+  "tests/CMakeFiles/pvdTest_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/CMakeFiles/pvdTest_autogen.dir/DependInfo.cmake"
   )

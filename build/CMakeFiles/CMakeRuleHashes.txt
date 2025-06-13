@@ -1,3 +1,9 @@
 # Hashes of file build rules.
 dea52364be51121d8e43f99388dc4080 CMakeFiles/stego_autogen
 00d66dbbc99d867eba1efe0491de1f35 stego_autogen/timestamp
+a368868de6e4fb13ad06dbf2c9f53058 tests/CMakeFiles/HammingTest_autogen
+a368868de6e4fb13ad06dbf2c9f53058 tests/CMakeFiles/lsb_dctTest_autogen
+a368868de6e4fb13ad06dbf2c9f53058 tests/CMakeFiles/pvdTest_autogen
+ea51a2a36f8accad9da3cfbdb9d26c1a tests/HammingTest_autogen/timestamp
+9b28673e79adcc57903952c00ceadd13 tests/lsb_dctTest_autogen/timestamp
+8d8a383ca229e7c81f8a3fc1cc86311c tests/pvdTest_autogen/timestamp

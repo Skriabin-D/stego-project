@@ -258,6 +258,15 @@ Qt6ZlibPrivate_DIR:PATH=D:/Qt/6.6.1/msvc2019_64/lib/cmake/Qt6ZlibPrivate
 Qt6_DIR:PATH=D:/Qt/6.6.1/msvc2019_64/lib/cmake/Qt6
 
 //Value Computed by CMake
+StegoTests_BINARY_DIR:STATIC=D:/stego_project/build/tests
+
+//Value Computed by CMake
+StegoTests_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+StegoTests_SOURCE_DIR:STATIC=D:/stego_project/tests
+
+//Value Computed by CMake
 Stego_BINARY_DIR:STATIC=D:/stego_project/build
 
 //Value Computed by CMake
@@ -402,7 +411,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

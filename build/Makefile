@@ -54,6 +54,16 @@ CMAKE_BINARY_DIR = D:\stego_project\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	D:\CMake\bin\ctest.exe $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test\fast: test
+.PHONY : test\fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -143,6 +153,123 @@ stego_autogen: cmake_check_build_system
 stego_autogen\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stego_autogen.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\stego_autogen.dir\build
 .PHONY : stego_autogen\fast
+
+#=============================================================================
+# Target rules for targets named HammingTest
+
+# Build rule for target.
+HammingTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) HammingTest
+.PHONY : HammingTest
+
+# fast build rule for target.
+HammingTest\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\HammingTest.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\HammingTest.dir\build
+.PHONY : HammingTest\fast
+
+#=============================================================================
+# Target rules for targets named lsb_dctTest
+
+# Build rule for target.
+lsb_dctTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) lsb_dctTest
+.PHONY : lsb_dctTest
+
+# fast build rule for target.
+lsb_dctTest\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lsb_dctTest.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\lsb_dctTest.dir\build
+.PHONY : lsb_dctTest\fast
+
+#=============================================================================
+# Target rules for targets named pvdTest
+
+# Build rule for target.
+pvdTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pvdTest
+.PHONY : pvdTest
+
+# fast build rule for target.
+pvdTest\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\pvdTest.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\pvdTest.dir\build
+.PHONY : pvdTest\fast
+
+#=============================================================================
+# Target rules for targets named HammingTest_autogen_timestamp_deps
+
+# Build rule for target.
+HammingTest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) HammingTest_autogen_timestamp_deps
+.PHONY : HammingTest_autogen_timestamp_deps
+
+# fast build rule for target.
+HammingTest_autogen_timestamp_deps\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\HammingTest_autogen_timestamp_deps.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\HammingTest_autogen_timestamp_deps.dir\build
+.PHONY : HammingTest_autogen_timestamp_deps\fast
+
+#=============================================================================
+# Target rules for targets named HammingTest_autogen
+
+# Build rule for target.
+HammingTest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) HammingTest_autogen
+.PHONY : HammingTest_autogen
+
+# fast build rule for target.
+HammingTest_autogen\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\HammingTest_autogen.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\HammingTest_autogen.dir\build
+.PHONY : HammingTest_autogen\fast
+
+#=============================================================================
+# Target rules for targets named lsb_dctTest_autogen_timestamp_deps
+
+# Build rule for target.
+lsb_dctTest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) lsb_dctTest_autogen_timestamp_deps
+.PHONY : lsb_dctTest_autogen_timestamp_deps
+
+# fast build rule for target.
+lsb_dctTest_autogen_timestamp_deps\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lsb_dctTest_autogen_timestamp_deps.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\lsb_dctTest_autogen_timestamp_deps.dir\build
+.PHONY : lsb_dctTest_autogen_timestamp_deps\fast
+
+#=============================================================================
+# Target rules for targets named lsb_dctTest_autogen
+
+# Build rule for target.
+lsb_dctTest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) lsb_dctTest_autogen
+.PHONY : lsb_dctTest_autogen
+
+# fast build rule for target.
+lsb_dctTest_autogen\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lsb_dctTest_autogen.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\lsb_dctTest_autogen.dir\build
+.PHONY : lsb_dctTest_autogen\fast
+
+#=============================================================================
+# Target rules for targets named pvdTest_autogen_timestamp_deps
+
+# Build rule for target.
+pvdTest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pvdTest_autogen_timestamp_deps
+.PHONY : pvdTest_autogen_timestamp_deps
+
+# fast build rule for target.
+pvdTest_autogen_timestamp_deps\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\pvdTest_autogen_timestamp_deps.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\pvdTest_autogen_timestamp_deps.dir\build
+.PHONY : pvdTest_autogen_timestamp_deps\fast
+
+#=============================================================================
+# Target rules for targets named pvdTest_autogen
+
+# Build rule for target.
+pvdTest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pvdTest_autogen
+.PHONY : pvdTest_autogen
+
+# fast build rule for target.
+pvdTest_autogen\fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\pvdTest_autogen.dir\build.make /nologo -$(MAKEFLAGS) tests\CMakeFiles\pvdTest_autogen.dir\build
+.PHONY : pvdTest_autogen\fast
 
 src\embedding_extracting\lsb_dct.obj: src\embedding_extracting\lsb_dct.cpp.obj
 .PHONY : src\embedding_extracting\lsb_dct.obj
@@ -320,8 +447,18 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
+	@echo ... HammingTest_autogen
+	@echo ... HammingTest_autogen_timestamp_deps
+	@echo ... lsb_dctTest_autogen
+	@echo ... lsb_dctTest_autogen_timestamp_deps
+	@echo ... pvdTest_autogen
+	@echo ... pvdTest_autogen_timestamp_deps
 	@echo ... stego_autogen
 	@echo ... stego_autogen_timestamp_deps
+	@echo ... HammingTest
+	@echo ... lsb_dctTest
+	@echo ... pvdTest
 	@echo ... stego
 	@echo ... src/embedding_extracting/lsb_dct.obj
 	@echo ... src/embedding_extracting/lsb_dct.i
