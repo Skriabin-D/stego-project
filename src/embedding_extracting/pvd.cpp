@@ -1,6 +1,5 @@
 #include "embedding_extracting/pvd.hpp"
 
-// Определение диапазонов для PVD
 const std::vector<std::pair<int, int>> pvd_ranges = {{0, 7}, {8, 15}, {16, 31}, {32, 63}, {64, 127}, {128, 255}};
 
 
@@ -13,7 +12,6 @@ std::pair<int, int> get_pvd_range(int diff) {
     return pvd_ranges.back();
 }
 
-// Функция встраивания PVD
 size_t embed_pvd(const std::string& image_path, const std::vector<uint8_t>& message_bits, const std::string& output_path) {
     cv::Mat img = cv::imread(image_path, cv::IMREAD_COLOR);
     if (img.empty()) {
@@ -84,7 +82,6 @@ size_t embed_pvd(const std::string& image_path, const std::vector<uint8_t>& mess
     return total_bits;
 }
 
-// Функция извлечения PVD
 std::vector<uint8_t> extract_pvd(const std::string& stego_path, size_t num_bits) {
     cv::Mat img = cv::imread(stego_path, cv::IMREAD_COLOR);
     if (img.empty()) {

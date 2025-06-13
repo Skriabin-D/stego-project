@@ -1,0 +1,11 @@
+PROJECT_NAME       = "SteganographyProject"
+OUTPUT_DIRECTORY   = docs
+OUTPUT_LANGUAGE    = English
+GENERATE_HTML      = YES
+GENERATE_LATEX     = NO
+INPUT              = .
+RECURSIVE          = YES
+FILE_PATTERNS      = *.cpp *.hpp
+EXTRACT_PRIVATE    = YES
+EXTRACT_STATIC     = YES
+SOURCE_BROWSER = YES

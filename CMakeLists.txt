@@ -48,3 +48,7 @@ target_link_libraries(stego
 
 add_compile_options("/utf-8")
 
+enable_testing()
+add_subdirectory(tests)
+
+
