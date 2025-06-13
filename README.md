@@ -1,1 +1,1 @@
-hi`
+Steganography project with graphical interface
