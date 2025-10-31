@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/stego_project/build/cmake_install.cmake",
-		"D:/stego_project/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

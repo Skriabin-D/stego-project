@@ -1,6 +1,7 @@
 #include "graphics/mainwindow.hpp"
 #include "graphics/ui_mainwindow.h"
 #include "graphics/gui_interface.hpp"
+
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent),
     ui(new Ui::MainWindow)
